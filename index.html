@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Service</title>
@@ -179,6 +181,26 @@
             font-size: 0.8em;
             width: 100%; /* Full width footer */
         }
+        /* Fixed Call Button */
+        .fixed-call-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #28a745; /* Green color for emphasis */
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 50px; /* Circular shape */
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 99999; /* Ensure it stays on top */
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+        }
+
+        .fixed-call-button:hover {
+            background-color: #1e7e34;
+            transform: scale(1.05);
+        }
 
         /* Media Queries for smaller screens */
         @media (max-width: 768px) {
@@ -189,6 +211,12 @@
             .call-buttons {
                 flex-direction: column; /* Stack buttons on smaller screens */
                 gap: 10px;
+            }
+            .fixed-call-button {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 20px;
+                font-size: 0.9em;
             }
         }
 
@@ -202,14 +230,17 @@
                 padding: 10px 15px;
             }
         }
+        .fixed-call-button {
+                font-size: 0.85em;
+            }
+        }
     </style>
 </head>
-<script defer data-domain="netilfy.ii" src="https://plausible.io/js/script.js"></script>
 <body>
-    <script defer="" data-domain="hhy.com" src="js/script.js"></script>
+    <script defer data-domain="netilfy.ii" src="https://plausible.io/js/script.js"></script>
     <header class="header">
         <div class="logo-container">
-            <img src="images/logo.png" alt="Your Company Logo" class="logo">
+            <img src="logo.png" alt="Your Company Logo" class="logo">
         </div>
         <h1>Wells Fargo Support Center</h1>
         <p>We're here to guide your financial journey.</p>
@@ -227,9 +258,9 @@
 
         <section class="section contact-info">
             <h2>Contact Us</h2>
-            <p><strong>Address:</strong> 123 Financial Way, Anytown, MA 02100</p>
+            
             <p><strong>24x7 Support:</strong> <a href="tel:+18334087275" style="text-decoration: none;color: #000000;">1(833) 408-7275</a></p>
-            <p><strong>Phone:</strong><a href="tel:+18334087275">+1 (833) 408-7275</a></p>
+            <p><strong>Phone:</strong><a href="tel:+18334087275" >+1 (833) 408-7275</a></p>
             <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM EST</p>
         </section>
 
@@ -255,7 +286,7 @@
 
             <button type="button" class="faq-toggle">How do I schedule a financial planning consultation?</button>
             <div class="faq-content">
-                <p>You can schedule a consultation by calling our office at 1(833) 408-7275 or by filling out the contact form on our website. Our team will get back to you promptly to arrange a convenient time.</p>
+                <p>You can schedule a consultation by calling our office at (833) 408-7275 or by filling out the contact form on our website. Our team will get back to you promptly to arrange a convenient time.</p>
             </div>
 
             <button type="button" class="faq-toggle">What are your fees for financial planning services?</button>
@@ -266,9 +297,9 @@
     </div>
 
     <footer class="footer">
-        © 2025 Wells Fargo. All rights reserved.
+        &copy; 2025 Wells Fargo. All rights reserved.
     </footer>
-
+    <a href="tel:+18334087275" class="fixed-call-button">Call Us</a>
     <script>
         const faqToggles = document.querySelectorAll('.faq-toggle');
 
@@ -284,5 +315,5 @@
             });
         });
     </script>
-
-</body></html>
+</body>
+</html>
